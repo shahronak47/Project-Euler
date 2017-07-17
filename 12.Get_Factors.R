@@ -15,5 +15,5 @@ getFactors2 <- function(num) {
   for (i in seq(ceiling(sqrt(num))))
     if (num %% i == 0) 
       numvec <- append(numvec, c(i, num/i))
-    return(numvec)
+    return(sort(unique(numvec)))
 }
