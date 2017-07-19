@@ -1,10 +1,10 @@
-calculate_names_scores <- function(file.path) {
-df <- data.frame(names = t(read.table(file = filename, sep = ",", na.strings = 0)), stringsAsFactors = F)
+calculate_names_scores <- function(file_path) {
+df <- data.frame(names = t(read.table(file = file_path, sep = ",", na.strings = 0)), stringsAsFactors = F)
 sortedNames <- sort(df$names)
-sum(mapply(function(x, y) sum(match(unlist(strsplit(x, "")), LETTERS)) * y, 
+total_sum <- sum(mapply(function(x, y) sum(match(unlist(strsplit(x, "")), LETTERS)) * y, 
        sortedNames, seq_along(sortedNames)))
+print(total_sum)
 }
-filename <- "C:/Users/Ronak Shah/Downloads/p022_names.txt"
-system.time(calculate_names_scores(filename))
+system.time(calculate_names_scores("C:/Users/Ronak Shah/Downloads/p022_names.txt"))
 #user  system elapsed 
-#1.15    0.02    1.17 
+#1.34    0.00    1.36 
