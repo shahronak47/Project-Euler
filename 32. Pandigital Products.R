@@ -1,8 +1,4 @@
-is_pandigital <- function(number) {
-  number_digits <- as.numeric(strsplit(as.character(number), "")[[1]])
- return (all(1:9 %in% number_digits) &  all(table(number_digits) == 1))
-}
-
+source("C:\\Users\\Ronak Shah\\Google Drive\\Git-Project-Euler\\32.Is_Pandigital.R")
 numvec = numeric()
 for (i in seq(101, 100000)) {
   for (j in seq(101, 100000)) {
