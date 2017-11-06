@@ -13,7 +13,6 @@ count_numbers <- function(max_number) {
 
 multiply_all_constants <- function(sum_digits, max_number) {
   pasted_digit = paste(seq(sum_digits), collapse = "")
-  
   n  = 1
   numvec = n
   while(n < max_number){
