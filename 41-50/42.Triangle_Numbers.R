@@ -11,6 +11,9 @@ get_triangle_numbers_from_file <- function() {
   sum(word_sum %in% triangle_numbers)
 }
 
+get_triangle_numbers_from_file()
+#[1] 162
+
 system.time(get_triangle_numbers_from_file())
 #user  system elapsed 
 #0.007   0.000   0.007 
