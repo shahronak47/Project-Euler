@@ -9,7 +9,8 @@ get_answer_for_euler_problem43 <- function() {
     n13 <- sprintf("%03d", seq(i, 1000, i))
     final_n13 <- n13[sapply(n13, function(x) all(table(strsplit(x, "")[[1]])==1))]
     #Create a named vector where every number has it's common part as it's name
-    #This part of the solution was taken from @Jaap's answer to this question on SO https://stackoverflow.com/questions/47431111/match-substring-of-two-vectors-and-create-a-new-vector-combining-them
+    #This part of the solution was taken from @Jaap's answer to this question on StackOverflow 
+    #https://stackoverflow.com/questions/47431111/match-substring-of-two-vectors-and-create-a-new-vector-combining-them
     final_n17 <- setNames(final_n17, substr(final_n17,1,2))
     final_n13 <- setNames(final_n13, substr(final_n13,2,3))
     #merge the values based on common part between final_n17 and final_n13
