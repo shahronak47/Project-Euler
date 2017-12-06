@@ -2,9 +2,9 @@ source("/Users/Ronak Shah/Google Drive/Git-Project-Euler/41-50/44.Generate_nth_P
 source("/Users/Ronak Shah/Google Drive/Git-Project-Euler/41-50/45.Generate_nth_hexagonal_numbers.R")
 source("/Users/Ronak Shah/Google Drive/Git-Project-Euler/41-50/45.Generate_nth_triangular_numbers.R")
 
-system.time(Reduce(intersect, list(sapply(seq(60000), generate_nth_triangular_number),
+Reduce(intersect, list(sapply(seq(60000), generate_nth_triangular_number),
                        sapply(seq(60000), generate_nth_pentagonal_number), 
-                       sapply(seq(60000), generate_nth_hexagonal_number))))
+                       sapply(seq(60000), generate_nth_hexagonal_number)))
 
 
 #[1]          1      40755 1533776805
