@@ -24,7 +24,7 @@ get_answer_for_problem46_v1 <- function() {
           }
       }
       if(!flag)
-        cat("The amswer is : ", start_num, "\n")
+        cat("The answer is : ", start_num, "\n")
     }
   }
 }
@@ -61,10 +61,13 @@ get_answer_for_problem46_v2 <- function() {
           break
       }
       if(!flag)
-        cat("The amswer is : ", start_num, "\n")
+        cat("The answer is : ", start_num, "\n")
     }
   }
 }
+
+get_answer_for_problem46_v2()
+# The answer is :  5777 
 
 system.time(get_answer_for_problem46_v2())
 
