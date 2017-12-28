@@ -5,7 +5,9 @@ prime_permutations_in_range <- function(start, stop) {
   checked_nums <- numeric()
   #creating a vector which checks already checked numbers
   for(i in seq(start, stop, 2)) { 
+    #Ignore the ones which we have already encountered
     if (!i %in% checked_nums) {
+      #Generate all the permutations of digit numbers 
       all_combns <- as.numeric(sapply(permn(strsplit(as.character(i), "")[[1]]), function(x) paste0(x, collapse = "")))
       #1487, 1748, 7481 etc  are going to generate same combinations, so 
       #no need to check them again and again
