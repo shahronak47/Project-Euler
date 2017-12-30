@@ -1,6 +1,6 @@
 source("/Users/Ronak Shah/Google Drive/Git-Project-Euler/31-40/35. Get_Primes_Under_n.R")
 source("/Users/Ronak Shah/Google Drive/Git-Project-Euler/1-10/3.Check_if_Prime.R")
-n <- 100
+n <- 1000000
 #keep number of consecutive sum prime
 cons_index <- 0 
 #get all the primes under n

@@ -1,4 +1,4 @@
-source("/Users/ronakshah/Google Drive/Project Euler/3.Check_if_Prime.R")
+source("/Users/Ronak Shah/Google Drive/Git-Project-Euler/1-10/3.Check_if_Prime.R")
 get_n_primes <- function(n) {
   count = 1
   primes = 2
