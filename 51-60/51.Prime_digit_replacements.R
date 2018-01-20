@@ -2,12 +2,14 @@ source("C:\\Users\\Ronak Shah\\Google Drive\\Git-Project-Euler\\1-10\\3.Check_if
 
 unknown_number = 2
 consecutive_primes = 7
-current_number = 99997
+
 flag = TRUE
 
 check_all_prime_combinations <- function(num) {
-  while(flag & current_number < 99999) {
-    print(current_number)
+  current_number = 56001
+  print(num)
+  while(flag & current_number < 60000) {
+    #print(current_number)
     if (is_prime(current_number)) {
       all_nums = as.numeric(sapply(0:9, function(x) 
         paste0(replace(strsplit(as.character(current_number), "")[[1]], num, x), collapse = "")))
@@ -23,8 +25,8 @@ check_all_prime_combinations <- function(num) {
   }
 }
 
-combn(seq(5), 2, check_all_prime_combinations)
+combn(seq(5), 2, check_all_prime_combinations, FALSE)
 #for (i in combn(seq(5), 2)) {
-#  #check_all_prime_combinations()
+#  check_all_prime_combinations(i)
 #  print(i)
 #}
