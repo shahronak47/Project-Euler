@@ -1,14 +1,14 @@
 source("C:\\Users\\Ronak Shah\\Google Drive\\Git-Project-Euler\\1-10\\3.Check_if_Prime.R")
 
-unknown_number = 2
-consecutive_primes = 7
+unknown_number = 3
+consecutive_primes = 8
 
 flag = TRUE
 
 check_all_prime_combinations <- function(num) {
-  current_number = 56001
+  current_number = 100001
   print(num)
-  while(flag & current_number < 60000) {
+  while(flag & current_number < 999999) {
     #print(current_number)
     if (is_prime(current_number)) {
       all_nums = as.numeric(sapply(0:9, function(x) 
@@ -25,8 +25,4 @@ check_all_prime_combinations <- function(num) {
   }
 }
 
-combn(seq(5), 2, check_all_prime_combinations, FALSE)
-#for (i in combn(seq(5), 2)) {
-#  check_all_prime_combinations(i)
-#  print(i)
-#}
+combn(seq(6), unknown_number, check_all_prime_combinations, FALSE)
