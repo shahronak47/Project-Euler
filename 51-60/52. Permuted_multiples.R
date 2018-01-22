@@ -3,8 +3,11 @@ get_character_in_order <- function(x){
 }
 
 is_permuted_multiple <- function(vec) {
+  #Every number should be of the same length, hence there would be only 1 unique value
   if (length(unique(nchar(vec))) == 1) {
+    #set a benchmark vector to compare against all other numbers in the vector
     ordered_vec = get_character_in_order(vec[1])
+    #Check if all the numbers follow the same order as the benchmarked vector
     return(all(ordered_vec == sapply(vec[-1], get_character_in_order)))
   }
   else
@@ -15,7 +18,9 @@ get_answer_problem_52 <- function() {
   flag = TRUE
   current_number = 1
   while(flag) {
+    #Generate 6 multiples for the current number
     all_multiples = current_number * 1:6
+    #Check if all the numbers are permutations of one another
     if(is_permuted_multiple(all_multiples)) {
       print(all_multiples)
       flag = FALSE
