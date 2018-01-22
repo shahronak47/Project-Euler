@@ -27,4 +27,29 @@ get_answer_problem_52 <- function() {
 system.time(get_answer_problem_52())
 #[1] 142857 285714 428571 571428 714285 857142
 #user  system elapsed 
-#10.845   0.101  11.174 
+#15.27    0.00   15.30  
+
+get_answer_problem_52_v1 <- function() {
+  flag = TRUE
+  start_number = 10
+  end_number = 16
+  current_vec = 1:16
+  while(flag) {
+    for (current_number in current_vec) {
+      all_multiples = current_number * 1:6
+      if(is_permuted_multiple(all_multiples)) {
+        print(all_multiples)
+        flag = FALSE
+        break
+      }
+    }
+    start_number = start_number * 10
+    end_number = as.numeric(paste0(end_number, 6))
+    current_vec = seq(start_number, end_number)
+  }
+}
+
+system.time(get_answer_problem_52_v1())
+#[1] 142857 285714 428571 571428 714285 857142
+#user  system elapsed 
+#8.57    0.00    8.59 
