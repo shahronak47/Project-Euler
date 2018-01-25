@@ -25,6 +25,6 @@ check_all_prime_combinations <- function(num) {
   }
 }
 
-combn(seq(6), unknown_number, check_all_prime_combinations, FALSE)
+combn(6, unknown_number, check_all_prime_combinations, FALSE)
 
 #[1] 121313 222323 323333 424343 525353 626363 727373 828383 929393
