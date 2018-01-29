@@ -19,3 +19,6 @@ get_combinatoric_selection <- function(max_number, limit) {
 system.time(get_combinatoric_selection(100, 1000000))
 #user  system elapsed 
 #303.96    2.14  306.78 
+
+print(counter)
+#[1] 4075
