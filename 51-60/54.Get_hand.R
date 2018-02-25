@@ -1,33 +1,56 @@
-source("/Users/ronakshah/Google Drive/Project Euler/54.Poker_card_supporting_functions.R")
-get_hand <- function(cards) {
-  value <- substr(cards, 1, 1)
-  suit <- substr(cards, 2, 2)
-  if(is_royal_flush(value, suit))
-    return("Royal Flush")
-  else
-    if(is_straight_flush(value, suit))
-      return("Straight Flush")
-  else
-    if(is_four_of_a_kind(value))
-      return("Four of a kind")
-  else
-    if(is_full_house(value))
-      return("Full house")
-  else
-    if(is_flush(suit))
-      return("Flush")
-  else
-    if(is_straight(value))
-      return("Straight")
-  else
-    if(is_three_of_a_kind(value))
-      return("Three of a kind")
-  else
-    if(is_two_pair(value))
-      return("Two pair")
-  else
-    if(is_a_pair(value))
-      return("Pair")
-  else
-    return(high_card(value))
+source("/Users/Ronak Shah/Google Drive/Git-Project-Euler/51-60/54.Poker_card_supporting_functions.R")
+get_hand <- function(hands_1, hands_2) {
+  value1 <- substr(hands_1, 1, 1)
+  suit1 <- substr(hands_1, 2, 2)
+  value2 <- substr(hands_2, 1, 1)
+  suit2 <- substr(hands_2, 2, 2)
+  output1 = is_royal_flush(value1, suit1)
+  output2 = is_royal_flush(value2, suit2)
+  if(sum(output1, output2) == 1) {
+    if (output1) return("Player 1") else return("Player 2")
+  }
+  
+  output1 = is_straight_flush(value1, suit1)
+  output2 = is_straight_flush(value2, suit2)
+  if(sum(output1, output2) == 1){
+    if (output1) return("Player 1") else return("Player 2")
+  }
+  output1 = is_four_of_a_kind(value1)
+  output2 = is_four_of_a_kind(value2)
+  if(sum(output1, output2) == 1){
+    if (output1) return("Player 1") else return("Player 2")
+  }
+  output1 = is_full_house(value1)
+  output2 = is_full_house(value2)
+  if(sum(output1, output2) == 1){
+    if (output1) return("Player 1") else return("Player 2")
+  }
+  output1 = is_flush(value1)
+  output2 = is_flush(value2)
+  if(sum(output1, output2) == 1){
+    if (output1) return("Player 1") else return("Player 2")
+  }
+  output1 = is_straight(value1)
+  output2 = is_straight(value2)
+  if(sum(output1, output2) == 1){
+    if (output1) return("Player 1") else return("Player 2")
+  }
+  output1 = is_three_of_a_kind(value1)
+  output2 = is_three_of_a_kind(value2)
+  if(sum(output1, output2) == 1){
+    if (output1) return("Player 1") else return("Player 2")
+  }
+  output1 = is_two_pair(value1)
+  output2 = is_two_pair(value2)
+  if(sum(output1, output2) == 1){
+    if (output1) return("Player 1") else return("Player 2")
+  }
+  output1 = is_a_pair(value1)
+  output2 = is_a_pair(value2)
+  if(sum(output1, output2) == 1){
+    if (output1) return("Player 1") else return("Player 2")
+  }
+  output1 = high_card(value1)
+  output2 = high_card(value2)
+  if (output1 > output2) return("Player 1") else return("Player 2")
 }
