@@ -9,3 +9,5 @@ for (i in 1:nrow(df)) {
   hands_2 <- as.character(df[i, 6:10, drop = TRUE])
   output[i] <- get_hand(hands_1, hands_2)
 }
+
+df$Winner <- output

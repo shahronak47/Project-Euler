@@ -31,7 +31,7 @@ is_flush <- function(suit) {
 
 #Straight: All cards are consecutive values.
 is_straight <- function(value) {
-  return(all(abs(diff(match(value, all_cards))) == 1))
+  return(all(diff(sort(match(value, all_cards))) == 1))
 }
 
 #Three of a Kind: Three cards of the same value.
@@ -52,4 +52,10 @@ is_a_pair <- function(value) {
 #High Card: Highest value card.
 high_card <- function(value) {
   return(max(match(value, all_cards)))
+}
+
+#In case of tie, for two pairs or three of a kind we send the highest value
+tie_breaker <- function(value1) {
+  #Give the name of the highest frequency card
+  return(as.numeric(names(sort(table(match(value1, all_cards)), decreasing = TRUE)[1])))
 }
