@@ -1,5 +1,6 @@
 library(gmp)
 options(digits = 22)
+options(scipen = 999)
 max_digit_sum = 0
 for (a in seq(99)) {
   for (b in seq(99)) {
