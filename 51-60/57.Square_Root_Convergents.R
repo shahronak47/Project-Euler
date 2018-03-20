@@ -18,3 +18,10 @@ while(count < 1000) {
     total_num = total_num + 1
   
 }
+
+total_num
+#[1] 153
+
+system.time()
+#user  system elapsed 
+#0       0       0 
