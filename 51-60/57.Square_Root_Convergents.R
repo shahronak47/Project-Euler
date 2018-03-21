@@ -13,7 +13,6 @@ while(count < 1000) {
   denom_1 = denom_2
   denom_2 = mul.bigz(as.bigz(2), as.bigz(denom_2)) + temp
   count = count + 1
-  #cat(num_2, denom_2, "\n")
   if (nchar(as.character(num_2)) > nchar(as.character(denom_2)))
     total_num = total_num + 1
   
